@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>couille</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+  
+ <div align="center"><h1>Tableau TVA</h1>
+    <div class="btn btn-secondary" id="btnAJouterLigne">Ajouter une ligne</div>
+    <div class="btn btn-warning " id="btnDeleteLastLine">Supprimer une ligne</div>
+    <div class="btn btn-danger" id="btnEmptyInputs">Effacer les champs</div>
+<hr>
+
+<div class="container">
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Libellé</th>
+        <th scope="col">Prix HT</th>
+        <th scope="col">TVA</th>
+        <th scope="col">Prix TTC</th>
+        <th scope="col">Calculer</th>
+        <th scope="col">Effacer</th>
+        <th scope="col">Supprimer</th>
+      </tr>
+    </thead>
+    <tbody class="tbody">
+      <tr id="tableau">
+        <td scope="row">
+            <input type="text" class="form-control" id="total" placeholder="Libellé">
+        </td>
+        <td>
+            <input type="text" class="form-control inputht" placeholder="Prix HT">
+        </td>
+        <td>
+            <select name="" id="" class="form-control inputtva">
+                <option value="5.5" class="form-control">5.5%</option>
+                <option value="20" class="form-control">20%</option>
+            </select>
+        </td>
+        <td>
+            <input readonly="readonly" type="text" class="form-control inputttc" id="total" placeholder="Prix TTC">
+        </td>
+       
+        <td><div class="btn btn-success" onclick="(calculTVAligne(this))">Calculer</div></td>
+        <td><div class="btn btn-warning" onclick="(emptyInputsLigne(this))">Effacer</div></td>
+        <td><div class="btn btn-danger"onclick="(deleteLigne(this))">Supprimer</div></td>
+      </tr>
+    </tbody>
+          <tr id="lastLine">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <input readonly id="inputTotal" type="text" class="form-control" id="total" placeholder="Total">
+            </td>
+              <td></td>
+              
+              <td></td>
+              <td></td>
+          </tr>
+        
+    
+  </table>
+
+</div>   
+
+
+
+
+
+
+
+
+
+</div> <!-- container -->
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
